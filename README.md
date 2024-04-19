@@ -17,7 +17,7 @@ aws Lambda上でcertbotを起動してroute53に登録されているドメイ�
     - 片方不要なら`build.sh`を編集してください．
 
 > [!NOTE]
-> awsの一部のリソースは単純化と削除回避のためTerraformで管理されていません．各自で作成してください．
+> awsの一部のリソースは単純化と削除回避のためTerraformで管理されていません．各自で作成してください．  
 > -> IAM User, IAM Role, S3 Bucket, ECR Repository, Schedule Group, Route53, 
 
 > [!NOTE]
@@ -46,7 +46,9 @@ aws Lambda上でcertbotを起動してroute53に登録されているドメイ�
 ```bash
 $ make build
 $ make up
+```
 
+```bash
 # in Docker Container
 $ aws-assume <profile-name> <MFA-Token> 
 $ cd tf
