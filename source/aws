@@ -1,0 +1,13 @@
+#!/var/lang/bin/python
+
+# pythonの場所は/var/runtime/bootstrapの内容をcatで吐き出させれば分かる
+# subprocess.run("cat /var/runtime/bootstrap", shell=True, capture_output=True)
+
+import sys
+import awscli.clidriver
+  
+def main():
+    return awscli.clidriver.main()
+ 
+if __name__ == '__main__':
+    sys.exit(main())

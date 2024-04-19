@@ -1,0 +1,8 @@
+ssl.env
+tf/.terraform
+tf/.terraform.lock.hcl
+tf/output.txt
+tf/terraform.tfstate
+tf/terraform.tfstate.backup
+tf/aws-userdata.auto.tfvars
+tf/memo.md

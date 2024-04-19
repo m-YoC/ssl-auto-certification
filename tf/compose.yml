@@ -1,0 +1,10 @@
+services:
+  aws-lambda-ssl:
+    build:
+      context: /aws-tf-ssl/source
+      dockerfile: /aws-tf-ssl/source/aws-lambda-py.dockerfile
+    image: aws-lambda-ssl-auto-certification
+    tty: true
+    ports:
+      - "9000:8080"
+    

@@ -1,0 +1,18 @@
+services:
+  aws-tf:
+    build:
+      context: ./dockerdata
+      dockerfile: aws-tf.dockerfile
+      args:
+        WORKDIR: $WORKDIR
+    image: awstf-ssl
+    # container_name: $CONTAINER_NAME
+    hostname: container-$COMPOSE_PROJECT_NAME
+    volumes:
+      - "./tf:/$WORKDIR/tf"
+      - "./source:/$WORKDIR/source"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    env_file:
+      - ~/Memo/.credentials/aws.env
+      - ./ssl.env
+    tty: true
