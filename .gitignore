@@ -6,3 +6,5 @@ tf/terraform.tfstate
 tf/terraform.tfstate.backup
 tf/aws-userdata.auto.tfvars
 tf/memo.md
+
+source/aws_lambda.zip
