@@ -93,6 +93,6 @@ AWS_MFA_SERIAL_ARN="arn:aws:iam::xxxxxxxxxxxx:mfa/example-auth"
 
 作成参考[^2][^3]
 
-[^1]: [ryo0301, MacからAWSにアクセスする時はAssumeRoleすることにした](https://qiita.com/ryo0301/items/0730e4b1068707a37c31)
-[^2]: [id:cohalz, Let's Encrypt証明書の自動更新システムを作る](https://developer.hatenastaff.com/entry/2018/12/11/133000)
-[^3]: [id:cohalz, CertUpdater](https://github.com/cohalz/CertUpdater)
+[^1]: [ryo0301, MacからAWSにアクセスする時はAssumeRoleすることにした, Qiita](https://qiita.com/ryo0301/items/0730e4b1068707a37c31)
+[^2]: [id:cohalz, Let's Encrypt証明書の自動更新システムを作る, Hatena Developer Blog](https://developer.hatenastaff.com/entry/2018/12/11/133000)
+[^3]: [id:cohalz, CertUpdater, GitHub](https://github.com/cohalz/CertUpdater)
