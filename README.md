@@ -5,7 +5,7 @@
 
 ### JP
 
-aws Lambda上でcertbotを起動してroute53に登録されているドメインのLet's Encript証明書を自動発行します．
+aws Lambda上でcertbotを起動してroute53に登録されているドメインのLet's Encrypt証明書を自動発行します．
 発行された証明書はaws S3 Bucketに保存されます． 
 定期実行はaws EventBridgeのSchedulerで定義されます．
 
@@ -23,6 +23,8 @@ aws Lambda上でcertbotを起動してroute53に登録されているドメイ�
 > [!NOTE]
 > 構造単純化のためバリデーションなどのエラー処理がされていません．必要な人は各自で行ってください．
 
+
+
 ## Tech, Keywords
 
 - aws
@@ -38,7 +40,7 @@ aws Lambda上でcertbotを起動してroute53に登録されているドメイ�
     - buildx
 - certbot
     - dns-route53
-- Let's Encript,
+- Let's Encrypt,
 
 
 ## Settings
@@ -87,6 +89,10 @@ AWS_ROLE_EXTERNAL_ID="ExampleExternalID"
 AWS_MFA_SERIAL_ARN="arn:aws:iam::xxxxxxxxxxxx:mfa/example-auth"
 ```
 
+---
 
+作成参考[^2][^3]
 
 [^1]: [ryo0301, MacからAWSにアクセスする時はAssumeRoleすることにした](https://qiita.com/ryo0301/items/0730e4b1068707a37c31)
+[^2]: [id:cohalz, Let's Encrypt証明書の自動更新システムを作る](https://developer.hatenastaff.com/entry/2018/12/11/133000)
+[^3]: [id:cohalz, CertUpdater](https://github.com/cohalz/CertUpdater)

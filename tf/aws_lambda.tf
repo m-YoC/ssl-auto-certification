@@ -8,7 +8,7 @@ data "archive_file" "zip" {
 # ECRのコンテナイメージから起動する場合
 resource "aws_lambda_function" "ssl_auto_cert" {
   function_name = "ssl-auto-certification"
-  description   = "Certificates domain automatically and push to s3-bucket. (certbot / route53 / wildcard / Let's Encript)"
+  description   = "Certificates domain automatically and push to s3-bucket. (certbot / route53 / wildcard / Let's Encrypt)"
   # イメージの指定: Image ListはX
   package_type  = "Image"
   image_uri     = "${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${local.lambda.ecr_registory}:arm64"
