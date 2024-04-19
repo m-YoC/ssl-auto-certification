@@ -18,7 +18,7 @@ aws Lambda上でcertbotを起動してroute53に登録されているドメイ�
 
 > [!NOTE]
 > awsの一部のリソースは単純化と削除回避のためTerraformで管理されていません．各自で作成してください．  
-> -> IAM User, IAM Role, S3 Bucket, ECR Repository, Schedule Group, Route53, 
+> -> IAM User, IAM Role, S3 Bucket, ECR Repository, Route53, 
 
 > [!NOTE]
 > 構造単純化のためバリデーションなどのエラー処理がされていません．必要な人は各自で行ってください．

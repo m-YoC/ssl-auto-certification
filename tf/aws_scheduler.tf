@@ -1,7 +1,7 @@
 
 resource "aws_scheduler_schedule" "ssl_auto_cert" {
   name        = "domain-certification__${var.DOMAINS[0]}"
-  group_name  = "ssl-auto-certification"
+  # group_name  = "ssl-auto-certification"
   description = "Certificates domain [${var.DOMAINS[0]}] automatically each month. (certbot / route53 / wildcard / Let's Encrypt)"
 
   flexible_time_window {
