@@ -1,12 +1,17 @@
-.DEFAULT_GOAL := help
 
-This-is: ## command set related to ssh certificates of [webmemo-test.net] 
-	:
-up: ## docker compose: up container
+
+###> !This is command set related to ssh certificates of domain
+
+###> docker compose
+
+up: ## Up container
 	@docker compose up -d
-down: ## docker compose: down container
+down: ## Down container
 	@docker compose down
-build: ## docker compose: build container
+build: ## Build container
 	@docker compose build
+
+###> @
+.DEFAULT_GOAL := help
 help: ## Display this help screen
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@sed -n 2p mfhelp.awk | cut -c 2- | xargs -i grep -E '{}' $(MAKEFILE_LIST) | awk -f mfhelp.awk
