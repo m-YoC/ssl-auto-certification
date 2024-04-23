@@ -99,7 +99,7 @@ COPY --from=terraform   $TF_APT_LIST_PATH       $TF_APT_LIST_PATH
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive TZ=$TIMEZONE \ 
     apt-get install -y --no-install-recommends \ 
-    make curl \ 
+    make curl gawk \ 
     terraform \ 
     docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
